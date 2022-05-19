@@ -11,7 +11,8 @@ function Card (props) {
     reviews: PropTypes.array.isRequired,
     description: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
-    year: PropTypes.number.isRequired
+    year: PropTypes.number.isRequired,
+    showReviews: PropTypes.bool.isRequired
   }
 
   const { user } = useContext(UserContext)
@@ -106,7 +107,7 @@ function Card (props) {
   }
 
   return (
-    <div className='card'>
+    <div className={props.showReviews ? 'card' : 'card hidden'}>
       <p className='name'>{props.name}</p>
       <div className='image'>
         <img src={props.image} alt={props.name} />
