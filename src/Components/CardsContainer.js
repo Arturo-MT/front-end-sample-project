@@ -26,18 +26,20 @@ function CardsContainer () {
   return (
     <>
     <div className="toggler">
+    <label htmlFor='eye' className='toggle-layout' >Layout:</label>
       {
         grid
-          ? <MdViewList onClick={toggleGrid} size={30}/>
-          : <RiLayoutGridFill onClick={toggleGrid} size={30}/>
+          ? <MdViewList id='layout' onClick={toggleGrid} size={30}/>
+          : <RiLayoutGridFill id='layout' onClick={toggleGrid} size={30}/>
 
       }
     </div>
     <div className='hidden-content'>
+      <label htmlFor='eye' className='show-info' >Show/Hide info:</label>
       {
         showReviews
-          ? <BsEyeSlash className='eye' onClick={toggleReviews} size={30} />
-          : <BsEyeFill className='eye' onClick={toggleReviews} size={30} />
+          ? <BsEyeSlash id='eye' className='eye' onClick={toggleReviews} size={30} />
+          : <BsEyeFill id='eye' className='eye' onClick={toggleReviews} size={30} />
       }
       </div>
     <div className={grid ? 'cards-container grid' : 'cards-container list'}>

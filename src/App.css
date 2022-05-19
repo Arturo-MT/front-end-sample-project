@@ -406,19 +406,35 @@ body {
 .toggler {
   width: fit-content;
   position: sticky;
-  transform: translate(70px, 70px);
+  transform: translate(20px, 70px);
   color: #fff;
   z-index: 20;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+}
+
+.toggle-layout {
+  padding: 7px 0;
+  margin-right: 7px;
 }
 
 .hidden-content {
   width: fit-content;
   position: sticky;
-  transform: translate(110px, 37px);
+  transform: translate(120px, 37px);
   color: #fff;
   z-index: 20;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+}
+
+.show-info {
+  padding: 7px 0;
+  margin-right: 7px;
 }
 
 @media screen and (max-width: 1100px) {
